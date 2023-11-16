@@ -1229,7 +1229,7 @@ input::-moz-focus-inner {
   margin: 0;
   padding: 0;
   position: absolute;
-  right: 60px;
+  right: -15%;
   top: 36px;
 }
 
@@ -1244,8 +1244,8 @@ input::-moz-focus-inner {
 }
 
 .home-logo img {
-  width: 100px;
-  height: 25px;
+  width: 1000px;
+  height: 200px;
 }
 
 
@@ -1371,6 +1371,12 @@ input::-moz-focus-inner {
 #mc-form label i {
   padding-right: 6px;
 }
+
+#mc_embed_signup{
+  background:#fff; 
+  clear:left; 
+  font:14px Helvetica,Arial,sans-serif; 
+  width: 500px;}
 
 .home-content__counter {
   padding-right: 6rem;
@@ -2264,6 +2270,8 @@ html.no-csstransitions .home-content__main {
 .info-is-visible .info-toggle::after {
   content: "close";
 }
+
+#mc_embed_signup{background:#fff; false;clear:left; font:14px Helvetica,Arial,sans-serif; width: 500px;}
 
 
 /* ------------------------------------------------------------------- 

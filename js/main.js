@@ -9,7 +9,7 @@
     
     var cfg = {
         scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+        mailChimpURL   : 'https://gmail.us21.list-manage.com/subscribe/post-json?u=0be5d1f09ecec46f8b38be645&amp;id=9523af2c14&amp;f_id=00ab37e7f0&c=?'   // mailchimp url
     },
 
     $WIN = $(window);
@@ -115,9 +115,27 @@
     * ------------------------------------------------------ */
     var ssAjaxChimp = function() {
         
+        // $('#mc-form').ajaxChimp({
+        //     language: 'en',
+        //     callback: callbackFunction,
+        //     url: cfg.mailChimpURL
+        // });
+
         $('#mc-form').ajaxChimp({
-            language: 'es',
-            url: cfg.mailChimpURL
+            url: 'https://gmail.us21.list-manage.com/subscribe/post-json?u=0be5d1f09ecec46f8b38be645&amp;id=9523af2c14&amp;f_id=00ab37e7f0',  // Replace with your Mailchimp API endpoint
+            language: 'en',  // Set the language as needed
+            callback: function(response) {
+                // Handle the response here
+                if (response.result === 'success') {
+                    // The subscription was successful
+                    console.log('Subscription successful!');
+                    // You might want to redirect or show a success message to the user
+                } else {
+                    // The subscription failed
+                    console.log('Subscription failed. Error: ' + response.msg);
+                    // You might want to display an error message to the user
+                }
+            }
         });
 
         // Mailchimp translation
@@ -158,3 +176,7 @@
 
 
 })(jQuery);
+
+
+
+
